@@ -21,6 +21,7 @@
       <!--e:logo+title -->
       <!--s:buttons -->
       <div class="twitter_col col-md-12"> <!--Main Coloumn -->
+
           <div class="main_title"> <!-- Bottoms Coloumn -->
                 <button class="title button_y col-md-5 col-xs-6 col-md-offset-1 active">
                       <p col-xs-3>
@@ -49,7 +50,40 @@
                 <div class="user_name col-md-5 col-xs-12">@<%= dataSx.user.screen_name %></div>
                <div class="data_tweet col-md-5 col-xs-12"><%= dataSx.created_at.substr(4, 16) %></div>
 
-               <div class="text_tweet col-md-12 col-xs-12"><a target="_blank" href="http://www.twitter.com/<%= dataSx.user.screen_name %>/status/<%= dataSx.id_str %>"><%= dataSx.text %></a></div>
+
+               <% var arrHashtag = dataSx.entities.hashtags %>
+               <% var arrMentions = dataSx.entities.user_mentions %>
+
+               <% var stringText = dataSx.text %>
+               <% var stringFinal = stringText %>
+
+               <% for (var i = 0 ; i <= arrHashtag.length ; i++) { %>
+                 <% if (arrHashtag[i] != null) { %>
+
+                    <%  var tagInit = '#'+arrHashtag[i].text %>
+                    <%  var tagColored = tagInit.fontcolor("#55adcd")%>
+                    <% stringFinal = stringFinal.replace(tagInit, tagColored)%>
+               
+                  <% } %>
+               <% } %> 
+
+               <% for (var i = 0 ; i <= arrMentions.length ; i++) { %>
+                 <% if (arrMentions[i] != null) { %>
+
+                    <%  var mentionInit = '@'+ arrMentions[i].screen_name %>
+                    <%  var mentionColored = mentionInit.fontcolor("#55adcd")%>
+                    <% stringFinal = stringFinal.replace(mentionInit, mentionColored)%>
+               
+                  <% } %>
+               <% } %> 
+
+
+               <%  var rt = "RT" %>
+               <%  var rtColored = rt.fontcolor("#55adcd")%>
+               <% stringFinal = stringFinal.replace(rt, rtColored)%>
+               
+
+               <div class="text_tweet col-md-12 col-xs-12"><a target="_blank" href="http://www.twitter.com/<%= dataSx.user.screen_name %>/status/<%= dataSx.id_str %>"><%- stringFinal %></a></div>
              </div>
 
            <% }); %>
@@ -69,7 +103,38 @@
                </div>
                <div class="user_name col-md-5 col-xs-12">@<%= dataDx.user.screen_name %></div>
                <div class="data_tweet col-md-5 col-xs-12"><%= dataDx.created_at.substr(4, 16) %></div>
-               <div class="text_tweet col-md-12 col-xs-12"><a target="_blank" href="http://www.twitter.com/<%= dataDx.user.screen_name %>/status/<%= dataDx.id_str %>"><%= dataDx.text %></a></div>
+
+               <% var arrHashtag = dataDx.entities.hashtags %>
+               <% var arrMentions = dataDx.entities.user_mentions %>
+
+               <% var stringText = dataDx.text %>
+               <% var stringFinal = stringText %>
+
+               <% for (var i = 0 ; i <= arrHashtag.length ; i++) { %>
+                 <% if (arrHashtag[i] != null) { %>
+
+                    <%  var tagInit = '#'+arrHashtag[i].text %>
+                    <%  var tagColored = tagInit.fontcolor("#55adcd")%>
+                    <% stringFinal = stringFinal.replace(tagInit, tagColored)%>
+
+                  <% } %>
+               <% } %> 
+
+               <% for (var i = 0 ; i <= arrMentions.length ; i++) { %>
+                 <% if (arrMentions[i] != null) { %>
+
+                    <%  var mentionInit = '@'+ arrMentions[i].screen_name %>
+                    <%  var mentionColored = mentionInit.fontcolor("#55adcd")%>
+                    <% stringFinal = stringFinal.replace(mentionInit, mentionColored)%>
+               
+                  <% } %>
+               <% } %>
+
+               <%  var rt = "RT" %>
+               <%  var rtColored = rt.fontcolor("#55adcd")%>
+               <% stringFinal = stringFinal.replace(rt, rtColored)%>
+
+               <div class="text_tweet col-md-12 col-xs-12"><a target="_blank" href="http://www.twitter.com/<%= dataDx.user.screen_name %>/status/<%= dataDx.id_str %>"><%- stringFinal %></a></div>
              </div>
 
            <% }); %>
