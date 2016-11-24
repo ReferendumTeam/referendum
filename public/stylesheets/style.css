@@ -30,6 +30,8 @@
     font-size: 1.5em;
     padding-bottom: 20px;
     word-wrap: break-word;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
 
@@ -40,6 +42,7 @@
     margin-top: 20px;
     text-align: center;
     font-size: 1.5em;
+    font-weight: bold;
 }
 
 
