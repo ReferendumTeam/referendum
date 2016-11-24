@@ -2,7 +2,9 @@ $(document).ready(function () {
 			$(".main_title button").click(function(){
 				 if ($(this).hasClass('button_y'))
 				 {
-						 $(this).toggleClass("active");
+						 $(this).addClass("active");
+						 $('button_n').removeClass("active");
+
 						 $(".yes_box").removeClass("onMobileHide");
 						 $(".no_box").addClass("onMobileHide");
 						 if($(".main_title button.button_n").hasClass('active')){
@@ -11,7 +13,9 @@ $(document).ready(function () {
 				 }
 			 else if ($(this).hasClass('button_n'))
 				{
-						 $(this).toggleClass("active");
+						 $(this).addClass("active");
+						 $('button_y').removeClass("active");
+
 						 $(".no_box").removeClass("onMobileHide");
 						 $(".yes_box").addClass("onMobileHide");
 						 if($(".main_title button.button_y").hasClass('active')){
