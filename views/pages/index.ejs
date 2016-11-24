@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <title>Referendum Costituzionale 2016</title>
+
+   <% include ../partials/head %>
+
+
+
+  </head>
+
+  <body>
+  <div class="container">
+
+      <div class="left_col col-sm-6">
+
+           <% dataSx.forEach(function(dataSx) { %>
+
+            <div class="tweet_box col-sm-12">
+              <div class="col-sm-2 text-center">
+                <img src="<%= dataSx.user.profile_image_url %>" class="img-circle img-responsive" alt="img_profile">
+              </div>
+              <div class="name_profile col-sm-10">
+                <%=dataSx.user.name %>
+              </div>
+              <div class="data_tweet col-sm-5"><%= dataSx.created_at.substr(4, 16) %></div>
+              <div class="user_name col-sm-5">@<%= dataSx.user.screen_name %></div>
+              <div class="text_tweet col-sm-12"><a target="_blank" href="http://www.twitter.com/<%= dataSx.user.screen_name %>/status/<%= dataSx.id_str %>"><%= dataSx.text %></a></div>
+            </div>
+
+          <% }); %>
+      </div>
+
+      <div class="left_col col-sm-6">
+
+      <% dataDx.forEach(function(dataDx) { %>
+
+       <div class="tweet_box col-sm-12">
+         <div class="col-sm-2 text-center">
+           <img src="<%= dataDx.user.profile_image_url %>" class="img-circle img-responsive" alt="img_profile">
+         </div>
+         <div class="name_profile col-sm-10">
+           <%=dataDx.user.name %>
+         </div>
+         <div class="data_tweet col-sm-5"><%= dataDx.created_at.substr(4, 16) %></div>
+         <div class="user_name col-sm-5">@<%= dataDx.user.screen_name %></div>
+         <div class="text_tweet col-sm-12"><a target="_blank" href="http://www.twitter.com/<%= dataDx.user.screen_name %>/status/<%= dataDx.id_str %>"><%= dataDx.text %></a></div>
+       </div>
+
+     <% }); %>
+     </div>
+
+
+    </div>
+  <<% include ../partials/script %>
+  <script src="/javascripts/script.js"></script>
+
+  </body>
+
+</html>
