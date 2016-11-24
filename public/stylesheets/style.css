@@ -26,14 +26,20 @@
 /* Title of the content "rif_Cost_2016" */
 
 .header .page_title {
-    padding-top: 50px;
+    padding-top: 40px;
     font-size: 1.5em;
-    padding-bottom: 20px;
+    padding-bottom: 5px;
     word-wrap: break-word;
     font-weight: bold;
     letter-spacing: 2px;
 }
-
+.header .page_sub_title{
+    font-size: 1em;
+    padding-bottom: 20px;
+    word-wrap: break-word;
+    font-weight: italic;
+    letter-spacing: 1px;
+}
 
 /* Position and font-size of the bottoms */
 
@@ -154,5 +160,29 @@
     }
     .twitter_col .data_tweet, .twitter_col .name_profile, .twitter_col .user_name {
         text-align: center;
+    }    
+    .container, .twitter_col {
+        padding: 0;
+    }
+    .tweet_box {
+        padding: 5px;
     }
 }
+
+
+
+@media screen and (max-width:321px) {
+
+    .header .page_title{
+            font-size: 10px;
+             line-height: 15px;
+        }
+    .header .page_sub_title{
+            font-size: 10px;
+             line-height: 15px;
+            letter-spacing: 2px;
+        }
+}
+
+
+
