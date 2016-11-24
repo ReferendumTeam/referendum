@@ -26,11 +26,9 @@
 /* Title of the content "rif_Cost_2016" */
 
 .header .page_title {
-    padding-top: 40px;
-    font-size: 1.5em;
-    padding-bottom: 5px;
+    padding-top: 25px;
+    font-size: 2.5em;
     word-wrap: break-word;
-    font-weight: bold;
     letter-spacing: 2px;
 }
 .header .page_sub_title{
@@ -172,37 +170,33 @@
 
 
 @media screen and (max-width:321px) {
-
     .header .page_title{
-            font-size: 20px;
-            line-height: 25px;
-            padding-top: 10px;
-            letter-spacing: 2px;
-
-        }
+        font-size: 20px;
+        line-height: 25px;
+        padding-top: 10px;
+        letter-spacing: 2px;
+    }
 
     .header .page_sub_title{
-            font-size: 9px;
+        font-size: 9px;
         letter-spacing: 1px;
         padding-top: 10px;
-            padding-bottom: 10px;
-                font-weight: bold;
-
-
-        }
+        padding-bottom: 10px;
+        font-weight: bold;
+    }
 
     .header {
         padding:0
     }
 
     .logo {
-    padding-top: 19px;
-    padding-bottom: 10px;
+        padding-top: 19px;
+        padding-bottom: 10px;
     }
+
     .title {
         margin-top: 10px;
-
-}
+    }
 
 }
 
