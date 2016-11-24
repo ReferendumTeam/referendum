@@ -148,7 +148,7 @@
     .tweet_img {
         margin-bottom: 10px;
     }
-    .twitter_col .text_tweet, .twitter_col .data_tweet, .twitter_col .name_profile, .twitter_col .user_name {
+    .twitter_col .data_tweet, .twitter_col .name_profile, .twitter_col .user_name {
         text-align: center;
     }
 }
