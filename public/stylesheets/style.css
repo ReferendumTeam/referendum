@@ -174,14 +174,36 @@
 @media screen and (max-width:321px) {
 
     .header .page_title{
-            font-size: 10px;
-             line-height: 15px;
-        }
-    .header .page_sub_title{
-            font-size: 10px;
-             line-height: 15px;
+            font-size: 20px;
+            line-height: 25px;
+            padding-top: 10px;
             letter-spacing: 2px;
+
         }
+
+    .header .page_sub_title{
+            font-size: 9px;
+        letter-spacing: 1px;
+        padding-top: 10px;
+            padding-bottom: 10px;
+                font-weight: bold;
+
+
+        }
+
+    .header {
+        padding:0
+    }
+
+    .logo {
+    padding-top: 19px;
+    padding-bottom: 10px;
+    }
+    .title {
+        margin-top: 10px;
+
+}
+
 }
 
 
